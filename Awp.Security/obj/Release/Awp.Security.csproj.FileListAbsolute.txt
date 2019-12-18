@@ -1,0 +1,7 @@
+F:\AgreeCode\awpDeviceAgreeBraunch\awp\Awp.Release\Awp.Security.dll
+F:\AgreeCode\awpDeviceAgreeBraunch\awp\Awp.Release\Awp.Security.pdb
+F:\AgreeCode\awpDeviceAgreeBraunch\awp\Awp\Awp.Security\obj\Release\Awp.Security.csprojAssemblyReference.cache
+F:\AgreeCode\awpDeviceAgreeBraunch\awp\Awp\Awp.Security\obj\Release\Awp.Security.csproj.CoreCompileInputs.cache
+F:\AgreeCode\awpDeviceAgreeBraunch\awp\Awp\Awp.Security\obj\Release\Awp.Security.csproj.CopyComplete
+F:\AgreeCode\awpDeviceAgreeBraunch\awp\Awp\Awp.Security\obj\Release\Awp.Security.dll
+F:\AgreeCode\awpDeviceAgreeBraunch\awp\Awp\Awp.Security\obj\Release\Awp.Security.pdb
