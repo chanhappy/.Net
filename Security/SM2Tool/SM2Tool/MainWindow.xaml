@@ -1,0 +1,77 @@
+﻿<Window x:Class="SM2Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SM2Tool"
+        mc:Ignorable="d"
+        Title="SM2" Height="480" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Row="0" Grid.Column="0" x:Name="generateKeys" Header="GenerateKeys" HorizontalAlignment="Left"  VerticalAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="800" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="publicKey" VerticalAlignment="Center"></TextBlock>
+                <TextBox Name="publicKey" Grid.Row="0" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="privateKey" VerticalAlignment="Center"></TextBlock>
+                <TextBox Name ="privateKey" Grid.Row="1" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Grid.Column="0" x:Name="encrypt" Header="Encrypt">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="800" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="publicKey" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="plainText" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="enResult" VerticalAlignment="Center"/>
+                <TextBox Name ="tbPublicKey" Grid.Row="0" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+                <TextBox Name ="tbPlainText" Grid.Row="1" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+                <TextBox Name ="tbEncryptResult" Grid.Row="2" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="2" Grid.Column="0" x:Name="decrypt" Header="Decrypt">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="800" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="privateKey" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="cipherText" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="deResult" VerticalAlignment="Center"/>
+                <TextBox Name ="tbPrivateKey" Grid.Row="0" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+                <TextBox Name ="tbCipherText" Grid.Row="1" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+                <TextBox Name ="tbDecryptResult" Grid.Row="2" Grid.Column="1" Margin="4" TextWrapping="Wrap"/>
+            </Grid>
+        </GroupBox>
+        <Button Grid.Row="0" Margin="20 0 0 0" HorizontalAlignment="Center" Height="40" Grid.Column="1" x:Name="generateKeysBtn" Content="generateKeys" Click="GenerateKeysBtn_Click"/>
+        <Button Grid.Row="1" Margin="20 0 0 0" Height="40" Grid.Column="1" x:Name="encryptBtn" Content="encrypt" Click="EncryptBtn_Click"/>
+        <Button Grid.Row="2" Margin="20 0 0 0" Height="40" Grid.Column="1" x:Name="decryptBtn" Content="decrypt" Click="DecryptBtn_Click"/>
+    </Grid>
+</Window>
