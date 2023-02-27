@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 打开一个 web socket
+    var ws = new WebSocket("ws://127.0.0.1:53001");
+
+    ws.onopen = function () {
+      console.log("客户端：111111111111111111")
+      for (let index = 0; index < 1000000; index++) {
+        ws.send("111111111111111111");
+      }
+    };
+
+
+
+    ws.onmessage = function (evt) {
+      var received_msg = evt.data;
+      console.log("received_msg:", received_msg);
+    };
+
+    ws.onclose = function (evt) {
+      // 关闭 websocket
+      console.log("onclose evt:", evt);
+    };
+
+    ws.onerror = function (err) {
+      console.log("onerror err:", err);
+    }
+
+
+  </script>
+</body>
+
+</html>
