@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 打开一个 web socket
+  let ws = new WebSocket("ws://localhost:9222/devtools/page/E039658B3E4F35558B1ACE9EA3C6EA94");
+
+  ws.onopen = function () {
+
+    let sendData = {
+      "id": 1,
+      "method": "Runtime.enable"
+    };
+
+    // let sendData = {
+    //   "id": 1,
+    //   "method": "HeapProfiler.takeHeapSnapshot",
+    //   "params": {reportProgress:true, treatGlobalObjectsAsRoots: false}
+    // };
+    // let sendData = {
+    //   "id": 2,
+    //   "method": "Runtime.consoleAPICalled"
+    // };
+
+    ws.send(JSON.stringify(sendData));
+  };
+
+  ws.onmessage = function (evt) {
+    console.log("===============evt===============");
+    console.log(evt)
+  };
+
+</script>
+
+</html>
